@@ -1,1 +1,1 @@
-worker: python ptgbot.py
+worker:python ptgbot.py

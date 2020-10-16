@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 bot_log = 756116165218009118
@@ -28,4 +29,4 @@ async def on_message_delete(message):
 		embed.add_field(name="Message deleted", value=""+message.content + " **was Deleted** "+f"""**by {message.author}**""", inline=False)
 		chann = message.guild.get_channel(bot_log)
 		await chann.send(embed=embed)
-client.run('Njg3MTUwOTQ4NTUyMTQ2OTQ0.XmhlMA.3JZKobucntVJligumsO3u_0A8aQ')
+client.run(os.environ['TOKEN'])

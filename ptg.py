@@ -1,5 +1,4 @@
 import discord
-import os
 
 client = discord.Client()
 bot_log = 756116165218009118

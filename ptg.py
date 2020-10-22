@@ -2,7 +2,6 @@ import discord
 import os
 
 client = discord.Client()
-userName = discord.User()
 bot_log = 756116165218009118
 @client.event
 async def on_ready():

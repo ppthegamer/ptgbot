@@ -3,7 +3,6 @@ import os
 
 client = discord.Client()
 userName = discord.User()
-audit = discord.AuditLogEntry(*,users,data,guild)
 bot_log = 756116165218009118
 @client.event
 async def on_ready():
@@ -27,9 +26,9 @@ async def on_member_remove(member):
 @client.event
 async def on_message_delete(message):
 		#messDeleter = message.author
-		embed = discord.Embed(title=f"""**{userName.name}**""",color=0xf40000)
+		embed = discord.Embed(title=f"""**{message.member.name}**""",color=0xf40000)
 		h = client.get_channel
-		embed.add_field(name="Message deleted", value=""+message.content + " **was Deleted** "+f"""**by {message.}**""", inline=False)
+		embed.add_field(name="Message deleted", value=""+message.content + " **was Deleted** "+f"""**by {message.author}**""", inline=False)
 		chann = message.guild.get_channel(bot_log)
 		
 		await chann.send(embed=embed)

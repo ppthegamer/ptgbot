@@ -28,8 +28,8 @@ async def on_message_delete(message):
 		#messDeleter = message.author
 		embed = discord.Embed(title=f"""**{message.author}**""",color=0xf40000)
 		h = client.get_channel
-		mes = auditLog.message_delete
-		embed.add_field(name="Message deleted", value=""+message.content + " **was Deleted** "+f"""**by {mes}**""", inline=False)
+		me = auditLog.message_delete
+		embed.add_field(name="Message deleted", value=""+message.content + " **was Deleted** "+f"""**by {me}**""", inline=False)
 		chann = message.guild.get_channel(bot_log)
 		
 		await chann.send(embed=embed)

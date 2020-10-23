@@ -2,7 +2,7 @@ import discord
 import os
 
 client = discord.Client()
-auditLog= discord.AuditLogAction()
+auditLog= discord.AuditLogAction(value)
 bot_log = 756116165218009118
 @client.event
 async def on_ready():

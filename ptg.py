@@ -1,6 +1,5 @@
 import discord
-import os
-from discord.calls import AuditLogAction 
+import os 
 client = discord.Client()
 bot_log = 756116165218009118
 

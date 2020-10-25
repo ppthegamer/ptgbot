@@ -34,13 +34,4 @@ async def on_message_delete(message):
 		chann = message.guild.get_channel(bot_log)
 		
 		await chann.send(embed=embed)
-@AuditLogAction
-async def messsage_delete(message):
-		embed = discord.Embed(title=f"""**{message.author}**""",color=0xf40000)
-		h = client.get_channel
-
-		embed.add_field(name="Messagse deleted", value=""+message.content + " **wasss Deleted** "+f"""**by {message.author}**""", inline=False)
-		chann = message.guild.get_channel(bot_log)
-		
-		await chann.send(embed=embed)
 client.run(os.environ['TOKEN'])

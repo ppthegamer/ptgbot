@@ -39,6 +39,7 @@ async def on_message_delete(message):
 @bot.command()
 async def enter(ctx,arg):
 	await ctx.send(arg)
+	print("Hello")
 bot.add_command(enter)
 
-client.run(os.environ['TOKEN'])
+client.run(os.environ['TOKEN'])	

@@ -1,11 +1,7 @@
 import discord
-<<<<<<< HEAD
 import os
 from discord.ext import commands
 
-=======
-import os 
->>>>>>> origin
 client = discord.Client()
 auditLog = discord.AuditLogAction()
 bot_log = 756116165218009118
@@ -39,7 +35,6 @@ async def on_message_delete(message):
 		embed.add_field(name="Message deleted", value=""+message.content + " **was Deleted** "+f"""**by {msas}**""", inline=False)
 		chann = message.guild.get_channel(bot_log)
 		await chann.send(embed=embed)
-<<<<<<< HEAD
 
 @bot.command()
 async def enter(ctx,arg):
@@ -47,6 +42,3 @@ async def enter(ctx,arg):
 bot.add_command(enter)
 
 client.run(os.environ['TOKEN'])
-=======
-client.run(os.environ['TOKEN'])
->>>>>>> origin

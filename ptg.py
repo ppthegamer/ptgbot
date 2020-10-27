@@ -2,10 +2,10 @@ import discord
 import os
 from discord.ext import commands
 
-client = discord.Client()
+#client = discord.Client()
 bot_log = 756116165218009118
 
-bot = commands.Bot(command_prefix="$")
+client = commands.Bot(command_prefix="$")
 @client.event
 async def on_ready():
 		print('We have logged in as {0.user}'.format(client))
@@ -34,9 +34,9 @@ async def on_message_delete(message):
 		chann = message.guild.get_channel(bot_log)
 		await chann.send(embed=embed)
 
-@bot.command()
-async def enter(ctx,arg):
-	await ctx.send(arg)
+@client.command()
+async def ping(ctx):
+	await ctx.send("pong")
 	print("Hello")
 
 client.run(os.environ['TOKEN'])	

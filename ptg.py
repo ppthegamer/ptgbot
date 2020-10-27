@@ -1,10 +1,12 @@
 import discord
 import os
+from discord.ext import commands
+
 client = discord.Client()
+auditLog = discord.AuditLogAction()
 bot_log = 756116165218009118
 
-
-
+bot = commands.Bot(command_prefix='$')
 @client.event
 async def on_ready():
 		print('We have logged in as {0.user}'.format(client))
@@ -29,10 +31,14 @@ async def on_message_delete(message):
 		#messDeleter = message.author
 		embed = discord.Embed(title=f"""**{message.author}**""",color=0xf40000)
 		h = client.get_channel
-
-		embed.add_field(name="Message deleted", value=""+message.content + " **was Deleted** "+f"""**by {message.author}**""", inline=False)
+		msas= auditLog.message_delete
+		embed.add_field(name="Message deleted", value=""+message.content + " **was Deleted** "+f"""**by {msas}**""", inline=False)
 		chann = message.guild.get_channel(bot_log)
-		
 		await chann.send(embed=embed)
+
+@bot.command()
+async def enter(ctx,arg):
+	await ctx.send(arg)
+bot.add_command(enter)
 
 client.run(os.environ['TOKEN'])

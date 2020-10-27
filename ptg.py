@@ -5,7 +5,7 @@ from discord.ext import commands
 client = discord.Client()
 bot_log = 756116165218009118
 
-bot = commands.Bot(command_prefix='$')
+bot = commands.Bot(command_prefix="$")
 @client.event
 async def on_ready():
 		print('We have logged in as {0.user}'.format(client))

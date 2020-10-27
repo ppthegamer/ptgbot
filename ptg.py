@@ -3,7 +3,6 @@ import os
 from discord.ext import commands
 
 client = discord.Client()
-auditLog = discord.AuditLogAction()
 bot_log = 756116165218009118
 
 bot = commands.Bot(command_prefix='$')

@@ -36,7 +36,7 @@ async def on_message_delete(message):
 
 @client.command()
 async def ping(ctx):
-	await ctx.send("pong")
-	print("Hello")
+		await ctx.send("pong")
+		print("Hello")
 
 client.run(os.environ['TOKEN'])	

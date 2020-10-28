@@ -1,13 +1,13 @@
-import discord
+#import discord
 import os
 from discord.ext import commands
 
-client = discord.Client()
+#client = discord.Client()
 bot_log = 756116165218009118
 
-botComm = commands.Bot(command_prefix='$',help_command=None)
+client = commands.Bot(command_prefix='$',help_command=None)
 
-@botComm.command()
+@client.command()
 async def ping(ctx):
 		await ctx.channel.send("pong")
 

@@ -14,6 +14,7 @@ async def on_ready():
 
 @client.command(name='as')
 async def ping(ctx):
+		print("sdfsdf")
 		await ctx.channel.send('ssfds')
 @client.event
 async def on_message(message):
@@ -37,9 +38,9 @@ async def on_message_delete(message,ctx):
 	
 		#messDeleter = message.author
 		embed = discord.Embed(title=f"""**{message.author}**""",color=0xf40000)
-		h = clientA.get_channel
+		#h = clientA.get_channel
 		embed.add_field(name="Message deleted", value=""+message.content + " **was Deleted** "+f"""**by {message.author}**""", inline=False)
-		chann = message.guild.get_channel(bot_log)
+		#chann = message.guild.get_channel(bot_log)
 		await ctx.channel.send(embed=embed)
 
 

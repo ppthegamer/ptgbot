@@ -1,6 +1,5 @@
 #import discord
 import os
-from dotenv import load_dotenv
 load_dotenv()
 from discord.ext import commands
 
@@ -11,7 +10,7 @@ client = commands.Bot(command_prefix='$',help_command=None)
 
 @client.command()
 async def ping(ctx):
-		await ctx.channel.send("pong")
+		await channel.send("pong")
 
 @client.event
 async def on_ready():

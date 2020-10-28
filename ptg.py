@@ -1,15 +1,16 @@
-#import discord
+import discord
 import os
 from discord.ext import commands
 
-#client = discord.Client()
+clientt = discord.Client()
 bot_log = 756116165218009118
 
 client = commands.Bot(command_prefix='$',help_command=None)
 
 @client.command()
+@clientt.event()
 async def ping(ctx):
-		await channel.send("pong")
+		await ctx.channel.send('ssfds')
 
 @client.event
 async def on_ready():
@@ -23,6 +24,7 @@ async def on_member_join(member):
 		for channel in member.guild.channels:
 			if str(channel)=="test":
 				await channel.send(f"""**Welcome to the server** {member.mention}""") 
+				
 
 @client.event
 async def on_member_remove(member):

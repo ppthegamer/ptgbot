@@ -12,9 +12,9 @@ bot_log = 756116165218009118
 async def on_ready():
 		print('We have logged in as {0.user}'.format(client))
 
-@client.command(name='!')
+@client.command(name='as')
 async def ping(ctx):
-		await ctx.send('ssfds')
+		await ctx.channel.send('ssfds')
 @client.event
 async def on_message(message):
 		if message.author == client.user:

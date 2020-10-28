@@ -5,7 +5,12 @@ from discord.ext import commands
 client = discord.Client()
 bot_log = 756116165218009118
 
-botComm = commands.Bot(command_prefix="$")
+botComm = commands.Bot(command_prefix='$',help_command=None)
+
+@botComm.command()
+async def ping(ctx):
+		await ctx.channel.send("pong")
+
 @client.event
 async def on_ready():
 		print('We have logged in as {0.user}'.format(client))
@@ -34,8 +39,6 @@ async def on_message_delete(message):
 		chann = message.guild.get_channel(bot_log)
 		await chann.send(embed=embed)
 
-@botComm.command()
-async def ping(ctx):
-		await ctx.send("pong")
+
 
 client.run(os.environ['TOKEN'])	

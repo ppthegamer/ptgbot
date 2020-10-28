@@ -1,13 +1,11 @@
-#import discord
+import discord
 import os
 from discord.ext import commands
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
-load_dotenv()
-
-
+#load_dotenv()
 client = commands.Bot(command_prefix='!')
-#clientt = discord.Client()
+clientA = discord.Client()
 bot_log = 756116165218009118
 
 @client.event
@@ -35,11 +33,11 @@ async def on_member_remove(member,ctx):
 				await ctx.channel.send(f"""{member.mention} **Left the Server**""")
 
 @client.event
-async def on_message_delete(message):
+async def on_message_delete(message,ctx):
 	
 		#messDeleter = message.author
 		embed = discord.Embed(title=f"""**{message.author}**""",color=0xf40000)
-		h = client.get_channel
+		h = clientA.get_channel
 		embed.add_field(name="Message deleted", value=""+message.content + " **was Deleted** "+f"""**by {message.author}**""", inline=False)
 		chann = message.guild.get_channel(bot_log)
 		await ctx.channel.send(embed=embed)

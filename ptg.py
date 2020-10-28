@@ -1,6 +1,5 @@
 #import discord
 import os
-load_dotenv()
 from discord.ext import commands
 
 #client = discord.Client()

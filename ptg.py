@@ -17,6 +17,11 @@ async def on_ready():
 async def ping(ctx):
 		print("sdfsdf")
 		await ctx.channel.send('ssfds')
+		
+@client.event
+async def on_member_join(member):
+    role = discord.utils.get(member.server.roles, id="<role ID>")
+    await client.add_roles(member, role)
 @client.event
 async def on_message(message):
 		if message.author == client.user:

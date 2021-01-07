@@ -18,16 +18,15 @@ async def ping(ctx):
 		print("sdfsdf")
 		await ctx.channel.send('ssfds')
 		
-@client.event
-async def on_member_join(member):
-    role = discord.utils.get(member.server.roles, id="796709135344992257")
-    await client.add_roles(member, role)
+
 @client.event
 async def on_message(message):
 		if message.author == client.user:
 			return
 @client.event
 async def on_member_join(member,ctx):
+    role = discord.utils.get(member.server.roles, id=796709135344992257)
+    await client.add_roles(member, role)
 		for channel in member.guild.channels:
 			if str(channel)=="test":
 				await ctx.channel.send(f"""**Welcome to the server** {member.mention}""") 

@@ -4,20 +4,13 @@ from discord.ext import commands
 #from dotenv import load_dotenv
 
 #load_dotenv()
-client = commands.Bot(command_prefix='!')
-clientA = discord.Client()
+client = discord.Client()
 token ='Njg3MTUwOTQ4NTUyMTQ2OTQ0.XmhlMA.3JZKobucntVJligumsO3u_0A8aQ'
 bot_log = 756116165218009118
 
 @client.event
 async def on_ready():
 		print('We have logged in as {0.user}'.format(client))
-
-@client.command(name='as')
-async def ping(ctx):
-		print("sdfsdf")
-		await ctx.channel.send('ssfds')
-		
 
 @client.event
 async def on_message(message):

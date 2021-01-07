@@ -18,8 +18,7 @@ async def on_message(message):
 			return
 @client.event
 async def on_member_join(member,ctx):
-    	print('Member Joined')
-    	role = discord.utils.get(member.server.roles,name='Members')
-	await client.add_roles(member,role)
+		role = discord.utils.get(member.server.roles,name='Members')
+		await client.add_roles(member,role)
 
 client.run(token)	

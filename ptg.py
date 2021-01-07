@@ -6,6 +6,7 @@ from discord.ext import commands
 #load_dotenv()
 client = commands.Bot(command_prefix='!')
 clientA = discord.Client()
+token ='Njg3MTUwOTQ4NTUyMTQ2OTQ0.XmhlMA.3JZKobucntVJligumsO3u_0A8aQ'
 bot_log = 756116165218009118
 
 @client.event
@@ -45,4 +46,4 @@ async def on_message_delete(message,ctx):
 
 
 
-client.run(os.environ['TOKEN'])	
+client.run(token)	

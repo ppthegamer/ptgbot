@@ -9,7 +9,6 @@ intents =discord.Intents().default()
 intents.members = True
 client = commands.Bot(command_prefix='!',intents =intents)
 token ='Njg3MTUwOTQ4NTUyMTQ2OTQ0.XmhlMA.3JZKobucntVJligumsO3u_0A8aQ'
-bot_log = 756116165218009118
 
 @client.event
 async def on_ready():

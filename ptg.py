@@ -8,7 +8,7 @@ from discord.ext import commands
 intents =discord.Intents().default()
 intents.members = True
 client = commands.Bot(command_prefix='!',intents =intents)
-token ='Njg3MTUwOTQ4NTUyMTQ2OTQ0.XmhlMA.3JZKobucntVJligumsO3u_0A8aQ'
+token ='none'
 
 @client.event
 async def on_ready():

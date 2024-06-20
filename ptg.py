@@ -21,7 +21,7 @@ async def on_message(message):
 @client.event
 async def on_member_join(member:discord.Member):
 
-    role = discord.utils.get(member.guild.roles,id=796709135344992257)
+    role = discord.utils.get(member.guild.roles,id=5345345345)
     await member.add_roles(role)
 
 client.run(token)	
